@@ -1,0 +1,26 @@
+extends layout
+
+block content
+ h1=title
+ h2=message
+ form.form-horizontal(action="/form", method="post", role="form")
+        .form-group
+          table
+            tr
+                td
+                    label.control-label(for="name") Name:
+                td
+                    input#name.form-control(name="name")
+            tr
+                td
+                    label.control-label(for="email") Email:
+                td
+                    input#email.form-control(name="email")
+            tr
+                td
+                    label.control-label(for="comments") Comments:
+                td
+                    input#comments.form-control(name="comments")
+            tr
+                td(colspan="2")
+                    input(class="button" type="submit" value="Add my contact")
