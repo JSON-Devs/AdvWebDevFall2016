@@ -61,7 +61,7 @@
         }
     };
 
-    makeRequest('data/todo.json').then(callbackFile.success, callbackFile.error);
+    makeRequest('http://localhost:3000/todo').then(callbackFile.success, callbackFile.error);
 
     function displayContent(selector, item) {
         var dom = document.querySelector(selector);
