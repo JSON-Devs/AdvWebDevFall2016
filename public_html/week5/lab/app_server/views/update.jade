@@ -1,0 +1,44 @@
+extends layout
+
+block content
+ h1=title
+ h2=message
+ form(action="/update", method="post", role="form")
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="fName") First Name
+          .col-xs-12.col-sm-10
+            input#fName.form-control(name="fName" value="#{results.fName}" required)
+            br
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="lName") Last Name
+          .col-xs-12.col-sm-10
+            input#lName.form-control(name="lName" value="#{results.lName}" required)
+            br
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="department") Department
+          .col-xs-12.col-sm-10
+            select#department.form-control.input-sm(name="department")
+              option(selected=results.department == "IT") IT
+              option(selected=results.department == "Accounting") Accounting
+              option(selected=results.department == "Human Resources") Human Resources
+              option(selected=results.department == "Marketing") Marketing
+              br
+            br
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="startDate") Start Date
+          .col-xs-12.col-sm-10
+            input#startDate.form-control(pattern="^(0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])[\/\-](19([0-9]{2})|20(0[0-9]|1[0-9]))$" placeholder="mm/dd/yyyy (Year between 1900 and 2019)" name="startDate" value="#{results.startDate}" required)
+            br
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="jobTitle") Job Tile
+          .col-xs-12.col-sm-10
+            input#jobTitle.form-control(name="jobTitle" value="#{results.jobTitle}" required)
+            br
+        .form-group
+          label.col-xs-10.col-sm-2.control-label(for="salary") Salary
+          .col-xs-12.col-sm-10
+            input#name.form-control(name="salary" value="#{results.salary}" required)
+            br
+        center
+            input(type="hidden" name="_id" value="#{results._id}")
+            input(type="submit" value="Update Employee" class="btn btn-info") 

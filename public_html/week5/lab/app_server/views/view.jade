@@ -1,0 +1,35 @@
+extends layout
+
+block content
+    h1=title
+    p=removed
+    table(class="table table-hover")
+        thead   
+            tr
+                th First Name
+                th Last Name
+                th Department
+                th Start Date
+                th Job Title
+                th Salary
+                th Update
+                th Delete
+        tbody
+        - each stuff in results
+            tr
+                td 
+                    = stuff.fName
+                td 
+                    = stuff.lName
+                td 
+                    = stuff.department
+                td 
+                    = stuff.startDate
+                td
+                    = stuff.jobTitle
+                td
+                    = stuff.salary
+                td
+                    a(href="../update/#{stuff._id}" class="btn btn-success btn-xs") Update
+                td
+                    a(href="../view/#{stuff._id}" class="btn btn-danger btn-xs") Delete
