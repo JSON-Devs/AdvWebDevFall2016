@@ -107,9 +107,10 @@ module.exports.update = function(req, res){
           salary: req.body.salary
         };
         var options = {};
-        var callback = function(){};
+        var callback = function(){ 
+            msg = "Employee info has been updated";
+        };
         Employee.update(query, update, options, callback);
-        msg = "Employee info has been updated";
      }
     
     
