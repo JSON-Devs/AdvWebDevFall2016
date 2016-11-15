@@ -1,0 +1,8 @@
+<h1>{{"phone name" | uppercase}}</h1>
+
+<div class="content">
+    <img ng-src="{{vm.phone.imageUrl}}" />
+    <!-- angular if statement to determine if there is a carrier -->
+    <p ng-if="vm.phone.carrier.length > 0"><strong>Carrier: </strong>{{vm.phone.carrier}}</p>
+    <p>{{vm.phone.snippet}}</p>
+</div>
