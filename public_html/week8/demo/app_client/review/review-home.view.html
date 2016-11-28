@@ -8,7 +8,7 @@
     <br />
     <br /> 
     <p ng-class="{'msg' : vm.message.length}">{{vm.message}}</p>
-    <p><a href="#/add/">Add New Review</a></p>
+    <p><a href="#/create/">Add New Review</a></p>
     <table class="gridtable">
         <thead>
             <tr>
@@ -27,7 +27,7 @@
             <td>{{review.reviewText}}</td>
             <td>{{review.createdOn}}</td>
             <td><a ng-href="#/update/{{review._id}}">Update</a></td>
-            <td><button ng-click="vm.deleteReview(review._id)">Delete</button></td>
+            <td><button ng-click="vm.deleteReviewFn(review._id)">Delete</button></td>
         </tr>
     </table>
         

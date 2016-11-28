@@ -14,7 +14,7 @@
               controller: 'ReviewHomeController',
               controllerAs: 'vm'
           }).
-          when('/add', {
+          when('/create', {
               templateUrl: '/review/review-form.view.html',
               controller: 'ReviewCreateController',
               controllerAs: 'vm'

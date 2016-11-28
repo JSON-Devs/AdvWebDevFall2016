@@ -11,7 +11,7 @@
         var vm = this;
 
         vm.reviews = [];
-        vm.deleteReview = deleteReview;
+        vm.deleteReviewFn = deleteReview;
         vm.message = '';
         
         activate();

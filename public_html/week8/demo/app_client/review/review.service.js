@@ -17,7 +17,7 @@
             'getReview' : getReview,
             'deleteReview' : deleteReview,
             'addReview' : addReview,
-            'updateReview' : updateReview,
+            'updateReview' : updateReview
         };
         return service;
 
