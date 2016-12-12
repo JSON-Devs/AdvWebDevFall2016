@@ -1,0 +1,36 @@
+<h1>{{vm.title}}</h1>
+
+<div class="content">
+        
+    <p ng-class="{'msg' : vm.message.length}">{{vm.message}}</p>
+    <p><a class="btn btn-primary btn-sm" href="#/">Home</a></p>
+    
+    <div class="form">
+        <label>First Name:</label>            
+        <input class="form-control" id="example-text-input" type="text" name="firstName" value="" placeholder="" ng-model="vm.data.firstName" />
+        <br /> 
+        <label>Last Name:</label>            
+        <input class="form-control" id="example-text-input" type="text" name="lastName" value="" placeholder="" ng-model="vm.data.lastName" />
+        <br /> 
+        <label>Department:</label>
+        <select class="form-control" id="exampleSelect1" name="department" ng-model="vm.data.department">
+            <option>Please Select:</option>
+            <option>Accounting</option>
+            <option>IT</option>
+            <option>HR</option>
+        </select>
+        <br /> 
+         <label>Start Date:</label>            
+        <input class="form-control" id="example-text-input" type="text" name="startDate" value="" placeholder="" ng-model="vm.data.startDate" />
+        <br /> 
+        <label>Job Title:</label>            
+        <input class="form-control" id="example-text-input" type="text" name="jobTitle" value="" placeholder="" ng-model="vm.data.jobTitle" />
+        <br />
+        <label>Salary:</label>            
+        <input class="form-control" id="example-text-input" type="text" name="salary" value="" placeholder="" ng-model="vm.data.salary" />
+        <br /> 
+        <center>
+        <input class="btn btn-success" type="submit" value="Submit" ng-click="vm.submit()" />
+        </center>
+    </div>
+</div>
