@@ -43,6 +43,7 @@
         }
        
     }
+    /*
     function formatDate(dateString){
         var date = new Date(dateString);
         var d = date.getDate();
@@ -52,5 +53,5 @@
         var output = m + ' ' + d + ' ' + y;
         return output;
     }
- 
+ */
 })();
